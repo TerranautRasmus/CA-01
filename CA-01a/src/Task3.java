@@ -12,8 +12,8 @@ import java.util.logging.Logger;
  * @author Rasmus
  */
 public class Task3 implements Runnable {
-
-    boolean active=true;
+public static boolean active=true;
+    
     
     @Override
     public void run() {
