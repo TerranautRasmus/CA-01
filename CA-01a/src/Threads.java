@@ -13,21 +13,20 @@ public class Threads {
     
         
         
+        Task1 task1 = new Task1();
+        Task2 task2 = new Task2();
+        Task3 task3 = new Task3();
         
-        
+        Thread t1 = new Thread(task1);
+        Thread t2 = new Thread(task2);
+        Thread t3 = new Thread(task3);
+                
+        t1.start();
+        t2.start();
+        t3.start();
     }    
     
-    
-//private class Tasks implements Runnable {
-//
-//        @Override
-//        public void run() {
-//            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//        }
-//    
-//    
-//    
-//}
+ 
     }
     
     
