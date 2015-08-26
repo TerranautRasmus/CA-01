@@ -9,30 +9,30 @@
  * @author Rasmus
  */
 public class Threads {
-    
-    
-    
-    
+
     public static void main(String[] args) {
-    
-        
-        
+
         Task1 task1 = new Task1();
         Task2 task2 = new Task2();
         Task3 task3 = new Task3();
-        
+
         Thread t1 = new Thread(task1);
         Thread t2 = new Thread(task2);
         Thread t3 = new Thread(task3);
-                
+
         t1.start();
         t2.start();
         t3.start();
-    }    
-    
- 
-    }
-    
-    
-   
 
+        try {
+            Thread.sleep(10000);
+            task3.active= false;
+
+        } catch (Exception e) {
+        }
+
+        while (t1.isAlive() || t2.isAlive());
+
+    }
+
+}

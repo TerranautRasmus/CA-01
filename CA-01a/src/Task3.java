@@ -12,7 +12,9 @@ import java.util.logging.Logger;
  * @author Rasmus
  */
 public class Task3 implements Runnable {
-public static boolean active=true;
+public boolean active=true;
+
+    
     
     
     @Override
